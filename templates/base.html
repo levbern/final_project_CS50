@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookFinder</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <header>
+        <nav class="nav-container">
+            <div class="nav-links">
+                <a href="/home" class="logo">BookFinder</a>
+                <a href="/home" class="nav-link">Home</a>
+                <a href="/search" class="nav-link">Search</a>
+                <a href="/liked" class="nav-link">Favorites</a>
+            </div>
+            <div class="user-section">
+                {% if current_user %}
+                    <span class="username">{{ current_user }}</span>
+                    <a href="/logout" class="nav-link">Logout</a>
+                {% else %}
+                    <a href="/register" class="nav-link">Register</a>
+                    <a href="/login" class="nav-link">Login</a>
+                {% endif %}
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>© 2025 BookFinder. All rights reserved</p>
+            <p>The data is used from <a href="https://openlibrary.org" style="color: #3498db; text-decoration: none;">openlibrary.com</a></p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <div class="header-section">
+        <h2 class="page-title">❤️ My favorites</h2>
+        <p class="subtitle">All your favorite books in one place</p>
+    </div>
+
+    <!-- Check that we have books (if not, books = None) -->
+    {% if books %}
+    <div class="books-container">
+        <!-- Book cards -->
+        {% for book in books %}
+        <div class="book-card liked" id="book-{{ loop.index }}">
+            <div class="book-info">
+                <h4 class="book-title">{{ book.title }}</h4>
+                <p class="book-author">{{ book.authors }}</p>
+                <span class="genre-badge">{{ book.genre }}</span>
+            </div>
+            <button class="like-btn liked"
+                    data-title="{{ book.title }}"
+                    data-genre="{{ book.genre }}"
+                    data-author="{{ book.authors }}"
+                    onclick="toggleLike(this)">
+                ♥
+            </button>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <div class="empty-state">
+        <p>You haven't liked anything yet.</p>
+    </div>
+    {% endif %}
+</div>
+
+
+<script>
+    function toggleLike(btn) {
+        const card = btn.closest('.book-card');
+        
+        fetch('/remove_like', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                title: btn.dataset.title,
+                genre: btn.dataset.genre,
+                author: btn.dataset.author,
+                login: "{{ current_user }}"
+            })
+        })
+        .then(response => {
+            if(response.ok) {
+                card.style.opacity = '0';
+                setTimeout(() => card.remove(), 300);
+            }
+        })
+        .catch(error => console.error('Error:', error));
+    }
+</script>
+{% endblock %}

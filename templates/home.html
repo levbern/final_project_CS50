@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="hero-section">
+    <h1 class="hero-title">Discover Your Next Favorite Book</h1>
+    <p class="hero-subtitle">Explore millions of titles across all genres with our intelligent recommendation system</p>
+</div>
+
+<div class="features-container">
+    <div class="feature-card">
+        <div class="card-icon">📚</div>
+        <h3>Genre-Based Search</h3>
+        <p>Find perfect matches in 50+ categories from Mystery to Sci-Fi using our filtering system</p>
+    </div>
+
+    <div class="feature-card">
+        <div class="card-icon">🔍</div>
+        <h3><a href="https://openlibrary.org" style="color: #3498db; text-decoration: none;">Openlibrary.com</a></h3>
+        <p>With the help of openlibrary.com</p>
+    </div>
+
+    <div class="feature-card">
+        <div class="card-icon">❤️</div>
+        <h3>Personal Library</h3>
+        <p>Save your favorite books and view them with one click.</p>
+    </div>
+</div>
+
+{% if not current_user %}
+<div class="cta-section">
+    <h2>Start Your Literary Journey</h2>
+    <div class="auth-buttons">
+        <a href="/register" class="cta-button primary">Join Now</a>
+        <a href="/login" class="cta-button secondary">Sign In</a>
+    </div>
+{% else %}
+<div class="cta-section">
+    <h2>Ready to Explore?</h2>
+    <a href="/search" class="cta-button primary">Start Searching →</a>
+{% endif %}
+</div>
+
+<div class="about-section">
+    <h2 style="text-align: center;">About BookFinder</h2>
+    <div class="creator-card">
+        <img src="static/img/creator.jpg" alt="Creator" class="creator-image">
+        <div class="creator-info">
+            <h3>Lev Bernshteyn</h3>
+            <br>
+            <p>My goal was to create a digital assistant for convenient book search.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

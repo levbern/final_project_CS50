@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="auth-container">
+    <h2 class="auth-title">Create New Account</h2>
+    
+    <form method="post" class="registration-form" onsubmit="return validateForm()">
+        <div class="form-group">
+            <label for="username">Choose your username:</label>
+            <input type="text" id="username" name="username" required 
+                   class="form-input {% if error == 'username_exists' %}input-error{% endif %}"
+                   placeholder="Enter unique username">
+            {% if error == 'username_exists' %}
+                <p class="error-message">This username is already taken</p>
+            {% endif %}
+        </div>
+
+        <div class="form-group">
+            <label for="password">Create password:</label>
+            <input type="password" id="password" name="password" required
+                   class="form-input" 
+                   placeholder="At least 8 characters"
+                   minlength="8">
+        </div>
+
+        <div class="form-group">
+            <label for="confirm_password">Confirm password:</label>
+            <input type="password" id="confirm_password" name="confirm_password" required
+                   class="form-input {% if error == 'password_mismatch' %}input-error{% endif %}"
+                   placeholder="Retype your password">
+            {% if error == 'password_mismatch' %}
+                <p class="error-message">Passwords do not match</p>
+            {% endif %}
+        </div>
+
+        <button type="submit" class="cta-button primary full-width">Register Now</button>
+    </form>
+
+    <p class="auth-link">
+        Already have an account? <a href="/login">Sign in here</a>
+    </p>
+</div>
+
+<script>
+    function validateForm() {
+        const password = document.getElementById('password').value;
+        const confirmPassword = document.getElementById('confirm_password').value;
+        
+        if (password !== confirmPassword) {
+            alert('Passwords do not match!');
+            return false;
+        }
+        
+        return true;
+    }
+</script>
+{% endblock %}

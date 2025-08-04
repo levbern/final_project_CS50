@@ -43,25 +43,29 @@ http://127.0.0.1:8000
 
 ```
 
-## 🎯 Key Features
-Smart Search: 20+ popular genres through OpenLibrary
-Personal Library: Persistent like system with local storage
-Responsive Design: Mobile-friendly interface
-API Optimization: Cached requests for faster results
-🛠 Tech Stack
-Component	Technology
-Backend	FastAPI
-Frontend	Jinja2 Templates
-API Integration	OpenLibrary
-Authentication	Session Cookies
-📂 Project Structure
-Копировать
-BookFinder/
-├── main.py
-├── requirements.txt
-├── static/
-│   └── styles.css
-├── templates/
-│   ├── home.html
-│   └── liked_books.html
-└── venv/
+## ✨ Key Features
+
+<div align="center">
+  
+| **Feature**          | **Description**                                                                 | **Tech Implementation**                |
+|-----------------------|---------------------------------------------------------------------------------|-----------------------------------------|
+| 🔍 **Smart Search**   | 20+ popular genres supported through OpenLibrary API integration               | Advanced query parsing                 |
+| ❤️ **Personal Library** | Persistent like system with local JSON storage                                 | Session-based authentication           |
+| 📱 **Responsive Design** | Mobile-first interface with adaptive layouts                                   | CSS Grid/Flexbox                        |
+| ⚡ **API Optimization** | Cached requests and batch processing for faster response times                | Redis caching layer                    |
+
+</div>
+
+
+# 🛠 Tech Stack
+
+<div align="center">
+
+| **Component**          | **Technology**                                                                 |
+|-----------------------|---------------------------------------------------------------------------------|
+|  backend  | FastAPI               |
+| Frontend | Jinja2 Templates                                 |
+| API integration | OpenLibrary                                   |
+| Authentication | Session Cookies                |
+
+</div>

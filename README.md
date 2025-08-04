@@ -4,36 +4,63 @@ Harvard CS50 Introduction to Computer Science final project
 [![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
 [![OpenLibrary](https://img.shields.io/badge/OpenLibrary-FFC107?logo=openlibrary&logoColor=black)](https://openlibrary.org/)
 
-**Видеопрезентация проекта**: [Ссылка на видео](ВАША_ССЫЛКА_НА_ВИДЕО) (замените на актуальный URL)
+**Video Demo**: [Project Presentation](YOUR_VIDEO_URL) (replace with actual URL)
 
-## 🚀 О проекте
-Интеллектуальная платформа для книголюбов, позволяющая:
-- 🔍 Искать книги по жанру через интеграцию с OpenLibrary
-- ❤️ Сохранять понравившиеся книги в персональную коллекцию
-- 📚 Просматривать историю лайков в удобном интерфейсе
+## 🚀 About
+Intelligent platform for book lovers offering:
+- 🔍 Genre-based book search via OpenLibrary API
+- ❤️ Save favorite books to personal collection
+- 📚 View liked books history with intuitive UI
 
-## ⚙️ Установка и запуск
+## ⚙️ Installation
 
-### Требования
+### Requirements
 - Python 3.8+
-- Активное интернет-соединение
+- Active internet connection
 
 ```bash
-# Клонировать репозиторий
-git clone https://github.com/ваш-username/BookFinder.git
+# Clone repository
+git clone https://github.com/your-username/BookFinder.git
 cd BookFinder
 
-# Настройка виртуального окружения
+# Virtual environment setup
 python -m venv venv
 
-# Активация (Windows)
+# Activation (Windows)
 venv\Scripts\activate
 
-# Активация (Linux/macOS)
+# Activation (Linux/macOS)
 source venv/bin/activate
 
-# Установка зависимостей
+# Install dependencies
 pip install -r requirements.txt
 
-# Запуск сервера
+# Start server
 uvicorn main:app --reload
+
+Access via browser:
+
+http://127.0.0.1:8000
+
+## 🎯 Key Features
+Smart Search: 20+ popular genres through OpenLibrary
+Personal Library: Persistent like system with local storage
+Responsive Design: Mobile-friendly interface
+API Optimization: Cached requests for faster results
+🛠 Tech Stack
+Component	Technology
+Backend	FastAPI
+Frontend	Jinja2 Templates
+API Integration	OpenLibrary
+Authentication	Session Cookies
+📂 Project Structure
+Копировать
+BookFinder/
+├── main.py
+├── requirements.txt
+├── static/
+│   └── styles.css
+├── templates/
+│   ├── home.html
+│   └── liked_books.html
+└── venv/

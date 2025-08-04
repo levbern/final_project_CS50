@@ -55,7 +55,7 @@ http://127.0.0.1:8000
 </div>
 
 
-# 🛠 Tech Stack
+## 🛠 Tech Stack
 
 <div align="center">
 
@@ -67,3 +67,18 @@ http://127.0.0.1:8000
 | Authentication | Session Cookies                |
 
 </div>
+
+## ℹ️ File information 
+1) **static/css/styles.css** stores all the styles that I use on the site. With its help, I made my pages beautiful and easy to read. 
+2) **static/img/creator.jpg** is a photo of the creator, which is transferred to the main page of the site. 
+3) **templates/base.html** is the base template that all other templates inherit. It contains the header and footer, and styles are also included in it. 
+4) **templates/error.html** is an error template. An error message is transferred to it if the user does something wrong.
+5) **templates/home.html** — the main page template. It contains brief information about the site's capabilities, as well as an invitation to register/log in to an account.
+6) **templates/liked.html** is a template for the liked books page. It contains a list of cards with information about the books you liked.
+7) **templates/login.html** is a template for logging into an account, consisting of forms that request a login and password.
+8) **templates/register.html** is a template for registering on the site, based on a form that requests login, password, and re-entry.
+9) **templates/search.html** is a template selection, consisting of a window in which you need to enter a genre, and a "search" button. After the user has entered the genre and clicked this button, the site displays the books found in the open library by genre.
+10) **database.py** is the request handler in the data resources
+11) **http_client.py** is the request handler in the openlibrary API.
+12) **init.py** initializes the client that makes requests to the library.
+13) **main.py** is the main file of the program. All post and get requests on my site are processed there.

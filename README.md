@@ -38,9 +38,10 @@ pip install -r requirements.txt
 # Start server
 uvicorn main:app --reload
 
-Access via browser:
-
+# Access via browser:
 http://127.0.0.1:8000
+
+```
 
 ## 🎯 Key Features
 Smart Search: 20+ popular genres through OpenLibrary

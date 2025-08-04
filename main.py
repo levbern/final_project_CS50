@@ -56,6 +56,7 @@ def template_response(
     )
 
 # ---------- Authentication Routes ---------- #
+@app.get("/", response_class=HTMLResponse)
 @app.get("/home", response_class=HTMLResponse)
 async def home(request: Request):
     """Landing page with personalized content"""

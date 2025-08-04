@@ -50,9 +50,7 @@ http://127.0.0.1:8000
 | **Feature**          | **Description**                                                                 | **Tech Implementation**                |
 |-----------------------|---------------------------------------------------------------------------------|-----------------------------------------|
 | 🔍 **Smart Search**   | 20+ popular genres supported through OpenLibrary API integration               | Advanced query parsing                 |
-| ❤️ **Personal Library** | Persistent like system with local JSON storage                                 | Session-based authentication           |
-| 📱 **Responsive Design** | Mobile-first interface with adaptive layouts                                   | CSS Grid/Flexbox                        |
-| ⚡ **API Optimization** | Cached requests and batch processing for faster response times                | Redis caching layer                    |
+| ❤️ **Personal Library** | Persistent like system with local storage                                 | Session-based authentication           |
 
 </div>
 

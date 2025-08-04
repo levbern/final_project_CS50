@@ -1,2 +1,2 @@
-# final_project_CS50
+# final CS50 project
 Harvard CS50 Introduction to Computer Science final project

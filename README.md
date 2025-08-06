@@ -4,7 +4,7 @@ Harvard CS50 Introduction to Computer Science final project
 [![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
 [![OpenLibrary](https://img.shields.io/badge/OpenLibrary-FFC107?logo=openlibrary&logoColor=black)](https://openlibrary.org/)
 
-**Video Demo**: [Project Presentation](YOUR_VIDEO_URL) (replace with actual URL)
+**Video Demo**: [Project Presentation](YOUR_VIDEO_URL)
 
 ## 🚀 About
 Intelligent platform for book lovers offering:
@@ -20,8 +20,8 @@ Intelligent platform for book lovers offering:
 
 ```bash
 # Clone repository
-git clone https://github.com/your-username/BookFinder.git
-cd BookFinder
+git clone https://github.com/levbern/final_project_CS50.git
+cd final_project_CS50
 
 # Virtual environment setup
 python -m venv venv
@@ -68,7 +68,7 @@ http://127.0.0.1:8000
 
 </div>
 
-## ℹ️ File information 
+## ℹ️ Files information 
 1) **static/css/styles.css** stores all the styles that I use on the site. With its help, I made my pages beautiful and easy to read. 
 2) **static/img/creator.jpg** is a photo of the creator, which is transferred to the main page of the site. 
 3) **templates/base.html** is the base template that all other templates inherit. It contains the header and footer, and styles are also included in it. 
